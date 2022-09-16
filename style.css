@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg,#2f1c53, #a46dff, #f6d1fd);
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    margin: auto; 
+} 
+
+.section {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
+    text-align: center;
+    margin: 20px;
+}
+.gh-grid {
+    grid-column: 2 / span 3;
+    width: 370px;
+    height: 100vh;
+    text-align: center;
+    margin: 20px; 
+} 
+
+.info {
+    grid-row: 2;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(154, 160, 186, 0.5), 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.info h3 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.info h3 span {
+    color: white;
+}
+
+.gh-details  {
+    grid-row: 1;
+    margin-top: 20px;
+   
+}
+
+.gh-bio {
+    grid-row: 2;
+    margin-top: 20px;
+}
+
+.my-pic {
+    grid-column: 2;
+    grid-row: 2;
+    box-shadow: 0 5px 10px rgba(154, 160, 186, 0.5), 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.gh-avatar {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.my-pic img {
+    height: 220px; 
+    margin-left: 10px;
+}
+
+.gh-avatar {
+    margin-left: 10px;
+    box-shadow: 0px 2px rgb(143, 139, 139);
+}
+
+/* aside */
+.sidebar {
+    padding: 30px;
+    background: #fdf9ff;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-right: 1px solid #e8dfec;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+}
+
+.sidebar .nav {
+    list-style: none;
+    margin-top: 50px;
+}
+
+.button {
+    position: relative;
+    font-weight: 500;
+    height: 60px;
+    width: 150px;
+    display: block;
+    border-bottom: 1px solid #e8dfec;
+    padding: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.button:hover {
+    border-bottom: 2px solid green;
+}
+
+.button i.over {
+    z-index: 500;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.button:hover i.over {
+    -webkit-transform: scale(2) rotate(90deg);
+    -moz-transform: scale(2) rotate(90deg);
+    -o-transform: scale(2) rotate(90deg);
+    transform: scale(2) rotate(90deg);
+    opacity: 0;
+}
+
+.button i.under {
+    z-index: 499;
+    opacity: 0.15;
+}
+.button i {
+    font-size: 25px;
+    margin-right: 15px;
+    margin-top: 10px;
+    padding: 5px;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    color: purple;
+}
+
+.button span.big-text {
+    font-size: 16px;
+    color: #302e4d;
+    text-shadow: 0px 1px #888;
+    position:absolute;
+    top: 25px;
+    right: 20px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.button:hover span.big-text {
+    top: 15px;
+}
+
+.button span.small-text {
+    position: absolute;
+    font-size: 13px;
+    color: red;
+    top: 40px;
+    right: -200px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease 0.3s;
+}
+
+.button:hover span.small-text {
+    right: 20px;
+}
+
+.active i {
+    color: green;
+}
+
+.sidebar .logo {
+    font-family: 'Allison', cursive;
+    font-size: 16px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.sidebar .logo a {
+    letter-spacing: 2px;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.sidebar .logo a::before {
+    content: "/";
+    width: 20px;
+    color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sidebar .logo a::after {
+    content: "/";
+    width: 20px;
+    color: red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.wiz {
+    color: #ff9900;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform:uppercase;  
+}
+
+.ard {
+    color: #00cc66;
+    font-size: 18px;   
+}
+
+
+
