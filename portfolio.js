@@ -25,11 +25,11 @@ form.addEventListener("submit", (e) => {
         if (res.message){
             alert("User Profile Not Found");
         } else {
+        form.reset();
         createProfile(res, main);
       main.innerHTML = github;
-        
-      form.reset();
         }
+        
     })
     .catch((err) => console.log(err));
 });
