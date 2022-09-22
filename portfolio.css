@@ -84,6 +84,15 @@ body {
     box-shadow: 0 5px 10px rgba(154, 160, 186, 0.5), 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
+.home {
+
+margin-top: 20px;
+}
+
+.home a {
+    color:whitesmoke;
+}
+
 .user__info ul li strong {
     margin-left: 8px;
 }
