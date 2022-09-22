@@ -49,7 +49,6 @@ function createProfile(username, element) {
          <li>${username.following}<strong>Following</strong></li>
          <li>${username.public_repos} <strong>Repositories</strong></li>
      </ul>
-
      
      <div id="repos"></div>
  </div>
@@ -57,4 +56,3 @@ function createProfile(username, element) {
     element.innerHTML = "";
     element.innerHTML = github; 
 }
-
